@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.sm.mapper.EntityContainListMapper">
+	<select id="getList" parameterType="int" resultMap="UserMap">
+		select * from test_list
+	</select>
+	<resultMap type="TestUser" id="UserMap">
+	<!-- 只有在公共部分全部相同的情况下才会进行不能部分的合并 -->
+	<!-- 	<id column="id" property="id"/> -->
+		<result column="username" property="username"/>
+		<result column="usercode" property="usercode"/>
+		<collection property="bookList" ofType="TestBook">
+			<result column="bookname" property="bookname"/>
+			<result column="bookcode" property="bookcode"/>
+		</collection>
+	</resultMap>
+</mapper>

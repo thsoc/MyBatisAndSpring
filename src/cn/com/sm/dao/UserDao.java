@@ -3,7 +3,7 @@ package cn.com.sm.dao;
 import cn.com.sm.po.User;
 
 /**
- * ÓÃ»§¹ÜÀíµÄ½Ó¿Ú
+ * ç”¨æˆ·ç®¡ç†çš„æ¥å£
  * @author 20721
  *
  */
